@@ -5,6 +5,9 @@ A simple yet powerful JavaScript project to calculate and analyze student grades
 
 ---
 
+![image](https://github.com/user-attachments/assets/c376b208-f12b-4d0a-8cee-41533ce344de)
+
+
 ## ✨ Features
 
 - **📊 Calculate Average Score:** Effortlessly compute the average of a list of scores.
@@ -14,51 +17,6 @@ A simple yet powerful JavaScript project to calculate and analyze student grades
 
 ---
 
-## 🛠️ Code Overview
-
-```javascript
-function getAverage(scores) {
-    let sum = 0;
-
-    for (const score of scores) {
-      sum += score;
-    }
-
-    return sum / scores.length;
-}
-
-function getGrade(score) {
-    if (score === 100) {
-      return "A++";
-    } else if (score >= 90) {
-      return "A";
-    } else if (score >= 80) {
-      return "B";
-    } else if (score >= 70) {
-      return "C";
-    } else if (score >= 60) {
-      return "D";
-    } else {
-      return "F";
-    }
-}
-
-function hasPassingGrade(score) {
-    return getGrade(score) !== "F";
-}
-
-function studentMsg(totalScores, studentScore) {
-    let passFail;
-    if (hasPassingGrade(studentScore)) {
-        passFail = "You passed the course.";
-    } else {
-        passFail = "You failed the course.";
-    }
-    return "Class average: " + getAverage(totalScores) + ". Your grade: " + getGrade(studentScore) + ". " + passFail;
-}
-
-console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
-```
 
 ---
 
